@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     time(&now);
     clock = localtime(&now);
 
-    strftime(time_string, 64, "%A, %B %d, %Y | %H:%M%n", clock); // see docs
+    strftime(time_string, 64, "%A, %B %d, %Y | %H:%M%n", clock); // see https://en.cppreference.com/w/c/chrono/strftime
 
     printf("Welcome");
     if (argc > 1)
