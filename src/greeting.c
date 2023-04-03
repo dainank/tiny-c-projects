@@ -10,9 +10,9 @@ int main(int argc, char *argv[])
     time(&now);
     clock = localtime(&now);
 
-    strftime(time_string, 64, "Today is %A, %B %d, %Y%nIt is %r%n", clock);
+    strftime(time_string, 64, "%A, %B %d, %Y | %H:%M%n", clock); // see docs
 
-    printf("Greetings");
+    printf("Welcome");
     if (argc > 1)
         printf(", %s", argv[1]);
     printf("!\n%s", time_string);
